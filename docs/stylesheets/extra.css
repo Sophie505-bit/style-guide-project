@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Собственное оформление сайта «Стайлгайд: документация по разработке ПО».
+   Палитра: тёмная бирюза (основа) + тёплый оранжевый (акцент).
+   ========================================================================== */
+
+/* --- Токены --- */
+:root {
+  --sg-primary: #0d4f4b;
+  --sg-primary-light: #1e6f68;
+  --sg-primary-dark: #083733;
+  --sg-accent: #e8763a;
+  --sg-accent-dark: #c95f27;
+  --sg-radius: 16px;
+  --sg-radius-sm: 10px;
+}
+
+/* --- Схемы --- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--sg-primary);
+  --md-primary-fg-color--light: var(--sg-primary-light);
+  --md-primary-fg-color--dark: var(--sg-primary-dark);
+  --md-accent-fg-color: var(--sg-accent);
+  --md-typeset-a-color: #0f615a;
+  --md-footer-bg-color: var(--sg-primary-dark);
+  --md-footer-bg-color--dark: #062b28;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0a3f3b;
+  --md-primary-fg-color--light: #14554f;
+  --md-primary-fg-color--dark: #062b28;
+  --md-accent-fg-color: #ff9d63;
+  --md-typeset-a-color: #7fd1c8;
+  --md-footer-bg-color: #062b28;
+  --md-footer-bg-color--dark: #041d1b;
+}
+
+/* --- Шапка: градиент и акцентная линия --- */
+.md-header {
+  background: linear-gradient(115deg, var(--sg-primary-dark) 0%, var(--sg-primary) 52%, var(--sg-primary-light) 100%);
+  border-bottom: 2px solid var(--sg-accent);
+}
+
+.md-tabs {
+  background: linear-gradient(115deg, rgba(8, 55, 51, 0.92) 0%, rgba(13, 79, 75, 0.85) 60%, rgba(30, 111, 104, 0.8) 100%);
+}
+
+/* --- Заголовки: акцентная черта --- */
+.md-typeset h1 {
+  border-bottom: 3px solid var(--sg-accent);
+  padding-bottom: 0.35rem;
+  display: table;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset h2 {
+  border-left: 4px solid var(--sg-accent);
+  padding-left: 0.6rem;
+  border-radius: 2px;
+}
+
+/* --- Герой на главной --- */
+.sg-hero {
+  margin: 0 0 1.2rem;
+  padding: 2.2rem 2.4rem 2.4rem;
+  border-radius: 20px;
+  color: #fff;
+  background:
+    radial-gradient(80rem 26rem at 112% -30%, rgba(232, 118, 58, 0.5), transparent 62%),
+    linear-gradient(125deg, #062b28 0%, #0d4f4b 48%, #1e6f68 100%);
+  box-shadow: 0 22px 44px -22px rgba(6, 43, 40, 0.65);
+}
+
+.sg-hero h1 {
+  color: #fff;
+  border-bottom: none;
+  display: block;
+  margin: 0.1rem 0 0.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.sg-hero p {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 48rem;
+  margin: 0 0 1.1rem;
+}
+
+.sg-hero .md-button {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+
+.sg-hero .md-button--primary {
+  background: var(--sg-accent);
+  border-color: var(--sg-accent);
+  color: #fff;
+}
+
+.sg-hero .md-button--primary:hover {
+  background: var(--sg-accent-dark);
+  border-color: var(--sg-accent-dark);
+}
+
+/* --- Строка «фактов» --- */
+.sg-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.4rem;
+}
+
+.sg-stat {
+  font-size: 0.68rem;
+  font-weight: 600;
+  border: 1px dashed var(--md-default-fg-color--light);
+  border-radius: 999px;
+  padding: 0.32rem 0.8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* --- Карточки разделов --- */
+.sg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.9rem;
+  margin: 1.1rem 0 1.6rem;
+}
+
+.sg-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: var(--sg-radius);
+  padding: 1rem 1.15rem 1.05rem;
+  background: var(--md-default-bg-color);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.sg-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--sg-accent);
+  box-shadow: 0 14px 28px -16px rgba(6, 43, 40, 0.5);
+}
+
+.sg-card h3 {
+  margin: 0.1rem 0 0.3rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.sg-card p {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.sg-card a {
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.sg-cards .sg-card p a {
+  font-size: inherit;
+}
+
+/* --- Кнопки --- */
+.md-typeset .md-button {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* --- Код --- */
+.md-typeset .highlight {
+  border-radius: var(--sg-radius-sm);
+  border-left: 3px solid var(--sg-primary-light);
+  overflow: hidden;
+}
+
+.md-typeset pre > code {
+  border-radius: var(--sg-radius-sm);
+}
+
+/* --- Таблицы --- */
+.md-typeset table:not([class]) {
+  border-radius: var(--sg-radius-sm);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--md-default-fg-color--lightest);
+  font-size: 0.74rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: rgba(13, 79, 75, 0.12);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: rgba(127, 209, 200, 0.12);
+}
+
+/* --- Примечания --- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--sg-radius-sm);
+}
+
+/* --- Подвал --- */
+.md-footer {
+  border-top: 2px solid var(--sg-accent);
+}
+
+/* --- Карточки: заголовок с иконкой --- */
+.sg-card__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.1rem 0 0.35rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.sg-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  flex: 0 0 1.7rem;
+  border-radius: 9px;
+  background: rgba(13, 79, 75, 0.12);
+  color: var(--sg-primary);
+}
+
+[data-md-color-scheme="slate"] .sg-card__icon {
+  background: rgba(127, 209, 200, 0.14);
+  color: #7fd1c8;
+}
+
+.sg-card__icon svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.sg-card:hover .sg-card__icon {
+  background: var(--sg-accent);
+  color: #fff;
+}

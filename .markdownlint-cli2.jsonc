@@ -18,6 +18,11 @@
       // Шаблон Pull Request начинается с заголовка второго уровня.
       "files": [".github/**/*.md"],
       "config": { "MD041": false }
+    },
+    {
+      // Главная страница начинается с HTML-блока «герой».
+      "files": ["docs/index.md"],
+      "config": { "MD041": false }
     }
   ],
   "globs": ["docs/**/*.md", "*.md", ".github/**/*.md"],

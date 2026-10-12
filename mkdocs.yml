@@ -1,34 +1,49 @@
-site_name: Руководство по стилю документации
-site_description: Стайлгайд для документации по разработке ПО в организации
-site_author: Команда документации
+site_name: "Стайлгайд: документация по разработке ПО"
+site_description: Руководство по стилю документации для разработки ПО в организации
+site_author: Команда документации · ИТМО, «Проектная документация»
 site_url: https://sophie505-bit.github.io/style-guide-project/
+repo_url: https://github.com/Sophie505-bit/style-guide-project
+repo_name: style-guide-project
+copyright: © 2026 Команда документации · Лабораторная работа «Проектная документация»
 
 theme:
   name: material
   language: ru
-  icon:
-    logo: material/book-open-page-variant
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  font:
+    text: Manrope
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Тёмная тема
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Светлая тема
   features:
-    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - content.action.edit
     - content.code.copy
     - search.suggest
+    - search.highlight
     - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
