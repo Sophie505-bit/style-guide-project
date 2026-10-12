@@ -57,6 +57,7 @@ nav:
       - Голос и тон: text/tone.md
       - Терминология: text/terminology.md
       - Числа, даты и единицы измерения: text/numbers-dates.md
+      - Доступность текста: text/accessibility.md
   - Оформление:
       - Заголовки, списки и таблицы: formatting/structure.md
       - Типографика и выделения: formatting/typography.md
