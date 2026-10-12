@@ -5,10 +5,7 @@
     "@cspell/dict-ru_ru/cspell-ext.json",
     "@cspell/dict-software-terms/cspell-ext.json"
   ],
-  "dictionaries": [
-    "ru_ru",
-    "softwareTerms"
-  ],
+  "dictionaries": ["ru_ru", "softwareTerms"],
   "allowCompoundWords": true,
   "words": [
     "mkdocs",
@@ -70,9 +67,5 @@
     "форки",
     "гггг"
   ],
-  "ignorePaths": [
-    "site/**",
-    "node_modules/**",
-    "package-lock.json"
-  ]
+  "ignorePaths": ["site/**", "node_modules/**", "package-lock.json"]
 }
