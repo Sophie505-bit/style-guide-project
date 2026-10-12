@@ -1,0 +1,75 @@
+site_name: Руководство по стилю документации
+site_description: Стайлгайд для документации по разработке ПО в организации
+site_author: Команда документации
+site_url: https://sophie505-bit.github.io/style-guide-project/
+
+theme:
+  name: material
+  language: ru
+  icon:
+    logo: material/book-open-page-variant
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Главная: index.md
+  - О руководстве: about.md
+  - Принципы: principles.md
+  - Текст:
+      - Голос и тон: text/tone.md
+      - Терминология: text/terminology.md
+      - Числа, даты и единицы измерения: text/numbers-dates.md
+  - Оформление:
+      - Заголовки, списки и таблицы: formatting/structure.md
+      - Типографика и выделения: formatting/typography.md
+      - Код и команды: formatting/code.md
+      - Ссылки и изображения: formatting/links-images.md
+  - Документы:
+      - README: documents/readme.md
+      - Инструкции (how-to): documents/how-to.md
+      - Справочник API: documents/api.md
+      - Журнал изменений: documents/changelog.md
+  - Именование: naming.md
+  - Процессы:
+      - Коммиты: process/commits.md
+      - Ветки и Pull Request: process/branches-pr.md
+      - Ревью документации: process/review.md
+  - Глоссарий: glossary.md

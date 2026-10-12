@@ -1,0 +1,19 @@
+{
+  "name": "style-guide-project",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Руководство по стилю документации (MkDocs Material)",
+  "scripts": {
+    "lint:md": "markdownlint-cli2",
+    "lint:spell": "cspell --no-progress --relative \"docs/**/*.md\" \"*.md\" \".github/**/*.md\"",
+    "lint": "npm run lint:md && npm run lint:spell",
+    "serve": "mkdocs serve",
+    "build": "mkdocs build --strict"
+  },
+  "devDependencies": {
+    "@cspell/dict-ru_ru": "^2.3.3",
+    "@cspell/dict-software-terms": "^5.4.7",
+    "cspell": "^9.8.0",
+    "markdownlint-cli2": "^0.22.1"
+  }
+}
