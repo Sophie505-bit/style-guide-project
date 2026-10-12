@@ -7,6 +7,9 @@
 
 [![CI](https://github.com/Sophie505-bit/style-guide-project/actions/workflows/ci.yml/badge.svg)](https://github.com/Sophie505-bit/style-guide-project/actions/workflows/ci.yml)
 [![Deploy to GitHub Pages](https://github.com/Sophie505-bit/style-guide-project/actions/workflows/deploy.yml/badge.svg)](https://github.com/Sophie505-bit/style-guide-project/actions/workflows/deploy.yml)
+[![Site](https://img.shields.io/badge/%D1%81%D0%B0%D0%B9%D1%82-blue)](https://sophie505-bit.github.io/style-guide-project/)
+
+Опубликованная версия: [sophie505-bit.github.io/style-guide-project](https://sophie505-bit.github.io/style-guide-project/).
 
 ## Состав репозитория
 
